@@ -1,6 +1,7 @@
 package banco;
 
-public class Principal {
+public class Principal extends Cofrinho{
     public static void main(String[] args){
+
     }
 }
