@@ -1,14 +1,19 @@
 package banco;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Cofrinho {
+    ArrayList<Moeda> listaMoedas = new ArrayList<Moeda>();
 
-    ArrayList<Moeda> listaMoedas = new ArrayList<>();
-    Scanner teclado = new Scanner(System.in);
+    public void adicionar(Real moeda) {
+        listaMoedas.add(moeda);
+    }
 
-    public void adicionar(Moeda moeda) {
+    public void adicionar(Euro moeda) {
+        listaMoedas.add(moeda);
+    }
+
+    public void adicionar(Dolar moeda) {
         listaMoedas.add(moeda);
     }
 
