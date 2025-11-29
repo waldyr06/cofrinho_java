@@ -3,7 +3,7 @@ package banco;
 import java.util.Scanner;
 
 public class Principal{
-    public static <moeda> void main(String[] args){
+    public static void main(String[] args){
 
         Scanner teclado = new Scanner(System.in);
         Cofrinho cofre = new Cofrinho();
@@ -29,33 +29,47 @@ public class Principal{
                     if (op2 == 1) {
                         System.out.println("Digite o valor: ");
                         double valorReal = teclado.nextDouble();
-                        Real r;
-                        r = new Real(valorReal);
-                        cofre.adicionar(r);
+                        cofre.adicionar(new Real(valorReal));
                     } else if (op2 == 2) {
                         System.out.println("Digite o valor: ");
                         double valorEuro = teclado.nextDouble();
-                        Euro e;
-                        e = new Euro(valorEuro);
-                        cofre.adicionar(e);
+                        cofre.adicionar(new Euro(valorEuro));
                     } else {
                         System.out.println("Digite o valor: ");
                         double valorDolar = teclado.nextDouble();
-                        Dolar d;
-                        d = new Dolar(valorDolar);
-                        cofre.adicionar(d);
+                        cofre.adicionar(new Dolar(valorDolar));
                     }
+                    break;
                 case 2:
-                    //Remover
+                    System.out.println("1 - Real");
+                    System.out.println("2 - Euro");
+                    System.out.println("3 - Dolar");
+                    int op3 = teclado.nextInt();
+                    if (op3 == 1) {
+                        System.out.println("Digite o valor: ");
+                        double valorReal = teclado.nextDouble();
+                        cofre.remover(new Real(valorReal));
+                    } else if (op3 == 2) {
+                        System.out.println("Digite o valor: ");
+                        double valorEuro = teclado.nextDouble();
+                        cofre.remover(new Euro(valorEuro));
+                    } else {
+                        System.out.println("Digite o valor: ");
+                        double valorDolar = teclado.nextDouble();
+                        cofre.remover(new Dolar(valorDolar));
+                    }
                     break;
                 case 3:
-                    //listarr moedas
+                    if (op == 3){
+                        System.out.println("Lista: ");
+                        cofre.listagemMoedas();
+                    }
                     break;
                 case 4:
-                    //Calcular total
+                    System.out.println("Calculando o total: ");
+                    cofre.totalConvertido();
                     break;
                 case 5:
-                    //Encerrar
                     break;
                 default:
                     System.out.println("Opção invalida");

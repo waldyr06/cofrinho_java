@@ -6,6 +6,12 @@ public class Real extends Moeda{
         super(valor);
     }
 
+
+    @Override
+    public String toString() {
+        return String.format("REAL - Valor: R$ %.2f", this.valor);
+    }
+
     @Override
     public double converter() {
         this.valor = valor;
@@ -13,8 +19,5 @@ public class Real extends Moeda{
     }
 
     @Override
-    public void info() {
-       this.valor = valor;
-       System.out.println("Informação do Real: " + valor);
-    }
+    public void info() {}
 }

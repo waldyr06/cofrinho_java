@@ -7,6 +7,11 @@ public class Dolar extends Moeda{
     }
 
     @Override
+    public String toString() {
+        return String.format("Dolar - Valor: R$ %.2f", this.valor);
+    }
+
+    @Override
     public double converter(){
         this.valor = valor;
         double valorConvertido = valor * 5.18;
@@ -14,8 +19,6 @@ public class Dolar extends Moeda{
     }
 
     @Override
-    public void info() {
-        this.valor = valor;
-        System.out.println("Informação do Dolar: " + valor);
-    }
+    public void info() {}
+
 }
