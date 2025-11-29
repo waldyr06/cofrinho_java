@@ -1,6 +1,6 @@
 package banco;
 
-public class Euro extends Moeda{
+public class Euro extends Moeda {
 
     public Euro(double valor) {
         super(valor);
@@ -15,10 +15,11 @@ public class Euro extends Moeda{
     @Override
     public double converter() {
         this.valor = valor;
-        double valorConvertido = valor * 6.18;
-        return valorConvertido;
+        return valor * 6.18;
     }
 
     @Override
-    public void info() {}
+    public void info() {
+        System.out.println("Valor Total: " + this.getValor());
+    }
 }

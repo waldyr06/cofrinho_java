@@ -1,6 +1,6 @@
 package banco;
 
-public class Real extends Moeda{
+public class Real extends Moeda {
 
     public Real(double valor) {
         super(valor);
@@ -19,5 +19,7 @@ public class Real extends Moeda{
     }
 
     @Override
-    public void info() {}
+    public void info() {
+        System.out.println("Valor Total: " + this.getValor());
+    }
 }
