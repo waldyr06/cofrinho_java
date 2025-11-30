@@ -1,7 +1,5 @@
 package banco;
 
-import java.util.Objects;
-
 public abstract class Moeda {
     double valor;
 
@@ -9,19 +7,26 @@ public abstract class Moeda {
         this.valor = valor;
     }
 
-    public void setValor(double valor) {
+    public boolean setValor(double valor) {
+        if (valor > valor || valor < 0){
+            System.out.println("Você não pode remover mais do que já tem!!!");
+            System.out.println("------------------------------------------------");
+
+            return false;
+        }
         this.valor = valor;
-    }
-    public double getValor() {
-        return valor;
+        return true;
     }
 
-    @Override
-    public String toString() {
-        return String.format("Moeda [Valor: %.2f]", valor);
+    public double getValor() {
+        return valor;
     }
 
     public abstract double converter();
     public abstract void info();
 
+    @Override
+    public String toString() {
+        return String.format("Moeda [Valor: %.2f]", valor);
+    }
 }

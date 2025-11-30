@@ -2,6 +2,8 @@ package banco;
 
 public class Dolar extends Moeda{
 
+    public static final double TAXA_DOLAR = 5.18;
+
     public Dolar(double valor) {
         super(valor);
     }
@@ -14,12 +16,11 @@ public class Dolar extends Moeda{
     @Override
     public double converter(){
         this.valor = valor;
-        return valor * 5.18;
+        return valor * TAXA_DOLAR;
     }
 
     @Override
     public void info(){
         System.out.println("Valor Total: " + this.getValor());
     }
-
 }

@@ -2,10 +2,11 @@ package banco;
 
 public class Euro extends Moeda {
 
+    public static final double TAXA_EURO = 6.18;
+
     public Euro(double valor) {
         super(valor);
     }
-
 
     @Override
     public String toString() {
@@ -15,7 +16,7 @@ public class Euro extends Moeda {
     @Override
     public double converter() {
         this.valor = valor;
-        return valor * 6.18;
+        return valor * TAXA_EURO;
     }
 
     @Override

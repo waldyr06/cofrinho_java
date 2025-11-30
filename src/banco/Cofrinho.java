@@ -36,7 +36,6 @@ public class Cofrinho {
         for (Moeda moeda : listaMoedas) {
             total += moeda.converter();
         }
-        System.out.printf("Total em Reais: %f", total);
-
+        System.out.println("Total em Reais: R$" + total);
     }
 }
