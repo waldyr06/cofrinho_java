@@ -2,15 +2,17 @@ package banco;
 
 public class Dolar extends Moeda{
 
+    //Fazendo assim evito deixar um número mágico pelo código
     public static final double TAXA_DOLAR = 5.18;
 
     public Dolar(double valor) {
         super(valor);
     }
 
+    //Deixando a saida formatada e mostrando o valor de fato e não a localização na memoria
     @Override
     public String toString() {
-        return String.format("Dolar - Valor: R$ %.2f", this.valor);
+        return String.format("Dolar - Valor: US$ %.2f", this.valor);
     }
 
     @Override

@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Principal {
     public static void main(String[] args) {
 
+        //Criando os objetos que serâo usados
         Scanner teclado = new Scanner(System.in);
         Cofrinho cofre = new Cofrinho();
 
@@ -12,6 +13,7 @@ public class Principal {
         System.out.println("Bem vindo ao cofrinho java seguro...");
         System.out.println("------------------------------------------------");
 
+        //MENU
         boolean rodando = true;
         while (rodando == true) {
 
@@ -24,6 +26,8 @@ public class Principal {
             System.out.println("5 - Encerrar");
             System.out.println("------------------------------------------------");
 
+            //Esse try ele vai tá pegando "qualquer" erro que acontecer a qualquer momento do programa assim evitando fechar bruscamente
+            //como a entrada sempre é do mesmo tipo, eu optei por fazer assim, para não lotar de try.
             try {
                 int op = teclado.nextInt();
 

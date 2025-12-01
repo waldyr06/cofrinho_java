@@ -2,15 +2,17 @@ package banco;
 
 public class Euro extends Moeda {
 
+    //Fazendo assim evito deixar um número mágico pelo código
     public static final double TAXA_EURO = 6.18;
 
     public Euro(double valor) {
         super(valor);
     }
 
+    //Deixando a saida formatada e mostrando o valor de fato e não a localização na memoria
     @Override
     public String toString() {
-        return String.format("Euro - Valor: R$ %.2f", this.valor);
+        return String.format("Euro - Valor: € %.2f", this.valor);
     }
 
     @Override
